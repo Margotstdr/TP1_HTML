@@ -1,0 +1,146 @@
+body {
+    background-color: #ffecfb;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    text-align: justify;
+}
+
+header, footer {
+    background-image: url('../img/GreenIT_background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 15px;
+}
+
+section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ffd4f6;
+    padding: 10px;
+}
+
+h1 {
+    color: #084608;
+}
+
+h2 {
+    color: #0b6610;
+}
+
+h2 ~ h3 {
+    color: #2d6a4f;
+}
+
+section a {
+    color: #a20666;
+    text-decoration-line: none;
+    font-style: italic;
+}
+
+nav {
+    font-size: large;
+    display: block
+}
+
+nav a:first-child{
+    color: #ffc9e2;
+}
+
+nav a:nth-child(2){
+    color: #ffa0cd;
+}
+
+nav a:nth-child(3){
+    color: #ff78b7;
+}
+
+nav a, footer, footer a {
+    padding: 10px;
+    margin: 10px;
+    text-decoration-line: none; 
+}
+
+nav a:hover, footer a:hover {
+    background-color: #f16ebf;
+    border-radius: 100px;
+}
+
+footer, footer a {
+    color: white;
+}
+
+header img {
+    width: 1000px;
+    height: auto;
+    border-radius: 50px;
+    margin: 15px;
+}
+
+#definition, #citation {
+    font-style: italic;
+    color: #c9449b;
+}
+
+#postit {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.postit-item {
+    position: relative;
+    padding: 12px;
+    margin: 20px;
+    border: 1px solid #c1bbaf;
+    border-radius: 10px;
+    text-align: center;
+    height: 70px;
+    width: 220px;
+}
+
+.postit-sublist {
+    display: none;
+    position: absolute;
+    /*top: 100%;*/
+    /*left: 0;*/
+    min-width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin: 8px 0 0 0;
+    list-style-type: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    z-index: 2;
+}
+
+.postit-item:hover .postit-sublist {
+    display: block;
+}
+
+.postit-sublist li {
+    padding: 4px 0;
+    color: #084608;
+}
+
+#postit .postit-item:nth-child(1) {
+    background-color: #ffe89e;
+}
+
+#postit .postit-item:nth-child(2) {
+    background-color: #d9f2ff;
+}
+
+#postit .postit-item:nth-child(3) {
+    background-color: #ffe1f2;
+}
+
+#postit .postit-item:nth-child(4) {
+    background-color: #e2ffd8;
+}
+
+#postit .postit-item:nth-child(5) {
+    background-color: #fff5d9;
+}

@@ -3,6 +3,7 @@
     <head> <!-- Entête du document HTML -->
         <title> Green IT & Sites web </title> <!-- Indique au navigateur quel titre vous donnez à votre page -->
         <meta charset="UTF-8"> <!-- précise l'encodage des caractère à UTF-8-->
+        <link rel= "stylesheet" href="../css/styles.css">
 
         <style>
             table, td, caption {
@@ -37,52 +38,52 @@
 
             <h1>Pratiques de codage efficaces pour réduire la consommation d'énergie</h1>
 
-            <p>« L'optimisation des performances web est une démarche globale qui englobe de 
+            <p id="citation">« L'optimisation des performances web est une démarche globale qui englobe de 
                 multiples techniques visant à accélérer la vitesse de chargement, réduire la 
                 consommation d'énergie et minimiser l'empreinte carbone d'un site web. »</p>
 
-            <ol>
+            <ol id="postit">
 
-                <li>Alléger votre site web</li>
+                <li class="postit-item">Alléger votre site web
+                    <ul class="postit-sublist">
+                        <li>Compresser des éléments de contenus (images, icônes et vidéos) avec des 
+                            outils tel que (suite Adobe , Gimp, ou Inkscape, la suite Affinity);</li>
+                        <li>Réparation des liens brisés</li>
+                        <li>Réduction du nombre de requêtes HTTP.</li>
+                    </ul>
+                </li>
 
-                <ul>
-                    <li>Compresser des éléments de contenus (images, icônes et vidéos) avec des 
-                        outils tel que (suite Adobe , Gimp, ou Inkscape, la suite Affinity);</li>
-                    <li>Réparation des liens brisés</li>
-                    <li>Réduction du nombre de requêtes HTTP.</li>
-                </ul>
+                <li class="postit-item">Faciliter le chargement de contenus de votre site
+                    <ul class="postit-sublist">
+                        <li>C’est le principe même de l’utilisation des caches. Car pourquoi recharger 
+                            ce que l’on a déjà chargé ailleurs.</li>
+                        <li>Les caches limitent les chargements multiples, et allègent donc les 
+                            requêtes/la consommation énergétique de votre site.</li>
+                    </ul>
+                </li>
 
-                <li>Faciliter le chargement de contenus de votre site</li>
+                <li class="postit-item">Exploiter le Content Delivery Network (CDN)
+                    <ul class="postit-sublist">
+                        <li>Permet une meilleure vitesse de chargement des pages de votre site</li>
+                        <li>Aide également à anticiper les plantages du site en cas d'affluence de 
+                            visiteurs.</li>
+                    </ul>
+                </li>
 
-                <ul>
-                    <li>C’est le principe même de l’utilisation des caches. Car pourquoi recharger 
-                        ce que l’on a déjà chargé ailleurs.</li>
-                    <li>Les caches limitent les chargements multiples, et allègent donc les 
-                        requêtes/la consommation énergétique de votre site.</li>
-                </ul>
+                <li class="postit-item">Optimisation du code
+                    <ul class="postit-sublist">
+                        <li>Réduire la taille du code, les fichiers JavaScript, CSS et autres...</li>
+                        <li>Nettoyer les plugins en excès.</li>
+                    </ul>
+                </li>
 
-                <li>Exploiter le Content Delivery Network (CDN)</li>
-
-                <ul>
-                    <li>Permet une meilleure vitesse de chargement des pages de votre site</li>
-                    <li>Aide également à anticiper les plantages du site en cas d'affluence de 
-                        visiteurs.</li>
-                </ul>
-
-                <li>Optimisation du code</li>
-
-                <ul>
-                    <li>Réduire la taille du code, les fichiers JavaScript, CSS et autres...</li>
-                    <li>Nettoyer les plugins en excès.</li>
-                </ul>
-
-                <li>Optimisation du Serveur</li>
-
-                <ul>
-                    <li>Choisir un hébergement vert</li>
-                    <li>Optimiser les paramètres du serveur</li>
-                    <li>mettre en œuvre des technologies de serveur modernes comme HTTP/2 ou HTTP/3 qui permettent des transferts de données plus efficaces.</li>
-                </ul>
+                <li class="postit-item">Optimisation du Serveur
+                    <ul class="postit-sublist">
+                        <li>Choisir un hébergement vert</li>
+                        <li>Optimiser les paramètres du serveur</li>
+                        <li>mettre en œuvre des technologies de serveur modernes comme HTTP/2 ou HTTP/3 qui permettent des transferts de données plus efficaces.</li>
+                    </ul>
+                </li>
 
             </ol>
 
