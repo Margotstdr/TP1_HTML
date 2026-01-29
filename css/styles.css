@@ -1,7 +1,9 @@
 body {
     background-color: #ffecfb;
     font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
-    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header, footer {
@@ -13,8 +15,9 @@ header, footer {
 }
 
 section {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    width: 92%;
+    max-width: 1100px;
     background-color: #ffd4f6;
     padding: 10px;
 }
@@ -39,7 +42,9 @@ section a {
 
 nav {
     font-size: large;
-    display: block
+    display: block;
+    padding: 10px;
+    margin: 10px;
 }
 
 nav a:first-child{
@@ -70,10 +75,21 @@ footer, footer a {
 }
 
 header img {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     height: auto;
     border-radius: 50px;
     margin: 15px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration-line: none;
+    border-radius: 8px;
+}
+
+a:hover {
+    background-color: #f6c8e6;
 }
 
 #definition, #citation {
@@ -83,29 +99,44 @@ header img {
 
 #postit {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 18px;
+    overflow: visible;
     padding: 0;
+    margin: 0 0 32px 0;
+    position: relative;
+    z-index: 5;
 }
 
 .postit-item {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     padding: 12px;
-    margin: 20px;
+    margin: 0;
     border: 1px solid #c1bbaf;
     border-radius: 10px;
     text-align: center;
-    height: 70px;
-    width: 220px;
+    min-height: 70px;
+    width: 180px;
+    box-sizing: border-box;
+    z-index: 6;
 }
 
 .postit-sublist {
     display: none;
     position: absolute;
-    /*top: 100%;*/
-    /*left: 0;*/
-    min-width: 220px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     background-color: #ffffff;
     border: 1px solid #c4c4c4;
     border-radius: 8px;
@@ -113,7 +144,7 @@ header img {
     margin: 8px 0 0 0;
     list-style-type: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-    z-index: 2;
+    z-index: 15;
 }
 
 .postit-item:hover .postit-sublist {
@@ -123,6 +154,7 @@ header img {
 .postit-sublist li {
     padding: 4px 0;
     color: #084608;
+    text-align: left;
 }
 
 #postit .postit-item:nth-child(1) {
@@ -143,4 +175,108 @@ header img {
 
 #postit .postit-item:nth-child(5) {
     background-color: #fff5d9;
+}
+
+.coding-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #1f6f3d;
+    margin-top: 16px;
+}
+
+.coding-table caption {
+    background-color: #f7c2e0;
+    color: #9b0a61;
+    font-weight: 700;
+    padding: 10px;
+    border: 2px solid #1f6f3d;
+    border-bottom: none;
+}
+
+.coding-table th, .coding-table td {
+    border: 1px solid #1f6f3d;
+    padding: 12px;
+    text-align: left;
+}
+
+.coding-table thead th {
+    background-color: #1f6f3d;
+    color: #ffffff;
+}
+
+.coding-table tbody tr:nth-child(odd) {
+    background-color: #e6f5e8;
+}
+
+.coding-table tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+form {
+    width: 80%; 
+    max-width: 900px;
+    margin: 40px auto; 
+    padding: 30px;
+    border: 2px solid #2e7d32; 
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    border: 1px solid #2e7d32;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+legend {
+    background-color: #2e7d32;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.ligne-form {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.ligne-form label {
+    width: 200px; 
+    font-weight: bold;
+}
+
+.champ-saisie {
+    flex: 1; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.zone-texte {
+    width: 100%;
+    height: 150px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.bouton-envoyer {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 10px auto 0 auto; 
+}
+
+.option-quiz {
+    margin: 8px 0;
 }

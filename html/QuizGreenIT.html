@@ -1,53 +1,51 @@
-<!DOCTYPE html> <!-- Version 5 de HTML-->
-<html lang="fr"> <!-- Précision de la langue pour le navigateur-->
-    <head> <!-- Entête du document HTML -->
-        <title> Green IT - Quiz </title> <!-- Indique au navigateur quel titre vous donnez à votre page -->
-        <meta charset="UTF-8"> <!-- précise l'encodage des caractère à UTF-8-->
-        <link rel= "stylesheet" href="../css/styles.css">
-    </head><!-- Fin de la balise d'entête -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title> Green IT - Quiz </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
 
-    <body><!-- Début du code de la page web -->
+    <body>
 
          <header>
-        
-            <img src="../img/GreenIT.jpg" alt="GreenIT_img" width="717" height="286"> <!-- Insertion d'une image avec une source, un texte alternatif et des dimensions -->
+            <img src="../img/GreenIT.jpg" alt="GreenIT_img" width="717" height="286">
         
             <nav>
                 <a href="accueil.html">Accueil</a>
                 <a href="GreenITSiteWeb.html">Green IT & sites web</a>
                 <a href="QuizGreenIT.html">Quiz Green IT</a>
             </nav>
-
         </header>
 
         <form>
-
             <fieldset>
                 <legend>Vos informations</legend>
 
-                <div>
+                <div class="ligne-form">
                     <label for="name">Nom&nbsp;:</label>
-                    <input type="text" id="name" name="last_name" />
+                    <input type="text" id="name" name="last_name" class="champ-saisie" />
                 </div>
 
-                <div>
+                <div class="ligne-form">
                     <label for="firstname">Prénom&nbsp;:</label>
-                    <input type="text" id="firstname" name="first_name" />
+                    <input type="text" id="firstname" name="first_name" class="champ-saisie" />
                 </div>
 
-                <div>
+                <div class="ligne-form">
                     <label for="birth">Date de naissance&nbsp;:</label>
-                    <input type="date" id="birth" name="birth_date" />
+                    <input type="date" id="birth" name="birth_date" class="champ-saisie" />
                 </div>
 
-                <div>
+                <div class="ligne-form">
                     <label for="email">Email&nbsp;:</label>
-                    <input type="email" id="email" name="email" />
+                    <input type="email" id="email" name="email" class="champ-saisie" />
                 </div>
 
-                <div>
+                <div class="ligne-form">
                     <label for="statut">Statut&nbsp;:</label>
-                    <select id="statut" name="status">
+                    <select id="statut" name="status" class="champ-saisie">
+                        <option value="">Choisissez un statut</option>
                         <option value="student">Étudiant</option>
                         <option value="employee">Employé</option>
                         <option value="other">Autre</option>
@@ -60,36 +58,34 @@
 
                 <ol>
                     <li>Qu'est-ce que la Green IT ?</li>
-                        <br>
-                        <div>
+                        <div class="option-quiz">
                             <input type="radio" id="q1a" name="quoi" value="a"/>
                             <label for="q1a">a) Une pratique visant à réduire l'impact environnemental des technologies de l'information.</label>
                         </div>
 
-                        <div>
+                        <div class="option-quiz">
                             <input type="radio" id="q1b" name="quoi" value="b"/>
                             <label for="q1b">b) Un système de recyclage des anciens ordinateurs.</label>
                         </div>
 
-                        <div>
+                        <div class="option-quiz">
                             <input type="radio" id="q1c" name="quoi" value="c"/>
                             <label for="q1c">c) Une méthode pour augmenter la consommation énergétique des serveurs.</label>
                         </div>
                         <br>
 
                     <li>Quel est l'objectif principal de la Green IT ?</li>
-                        <br>
-                        <div>
+                        <div class="option-quiz">
                             <input type="checkbox" id="q2a" name="objectif" value="a">
                             <label for="q2a">a) Réduire la consommation d'énergie.</label>
                         </div>
 
-                        <div>
+                        <div class="option-quiz">
                             <input type="checkbox" id="q2b" name="objectif" value="b">
                             <label for="q2b">b) Minimiser les déchets électroniques.</label>
                         </div>
 
-                        <div>
+                        <div class="option-quiz">
                             <input type="checkbox" id="q2c" name="objectif" value="c">
                             <label for="q2c">c) Optimiser les performances des appareils électroniques.</label>
                         </div>
@@ -97,20 +93,19 @@
 
                     <li>Donnez un exemple de pratique Green IT :</li>
                         <br>
-                        <div>
-                            <input type="text" id="q3" name="pratique"/>
-                        </div>
+                        <textarea id="q3" name="pratique" class="zone-texte"></textarea>
                 </ol>
             </fieldset>
 
-            <button type="submit">Envoyer</button>
+            <button type="submit" class="bouton-envoyer">Envoyer</button>
 
         </form>
 
         <footer>
-
             <p>©️2025 Mohamed HAMIDI.</p>
             <p>Tous droits réservés.</p>
             <a href="https://www.greenit.fr">En savoir plus ?</a>
-
         </footer>
+
+    </body>
+</html>
